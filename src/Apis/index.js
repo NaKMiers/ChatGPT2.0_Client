@@ -8,7 +8,6 @@ export const fetchResponse = async chat => {
          },
          body: JSON.stringify({
             message: chat.map(message => message.message).join(' \n '),
-            // message: chat[chat.length - 1].message,
          }),
       })
       const data = await response.json()
